@@ -270,28 +270,21 @@ int main() {
 	
 	//порівняння дат
 
-	bool compare1 = d[0] > d[1];
-	bool compare2 = d[1] > d[2];
-	bool compare3 = d[2] > d[1];
-	bool compare4 = d[0] < d[1];
-
-
-	cout << " " << endl;
-	cout << "Дата 1 більша за дату 2 (1-так, 0-ні): " << compare1 << endl;
-	cout << "Дата 2 більша за дату 3 (1-так, 0-ні): " << compare2 << endl;
-	cout << "Дата 3 більша за дату 2 (1-так, 0-ні): " << compare3 << endl;
-	cout << "Дата 2 більша за дату 1 (1-так, 0-ні):  " << compare4 << endl;
-
-	bool rivno1 = d[0] == d[1];
-	bool rivno2 = d[1] == d[2];
-	bool rivno3 = d[2] == d[1];
-	bool rivno4 = d[0] == d[1];
-	
-	cout << " " << endl;
-	cout << "Дата 1 однакова з датою 2 (1-так, 0-ні): " << rivno1 << endl;
-	cout << "Дата 2 однакова з датою 3 (1-так, 0-ні): " << rivno1 << endl;
-	cout << "Дата 3 однакова з датою 2 (1-так, 0-ні): " << rivno1 << endl;
-	cout << "Дата 2 однакова з датою 1 (1-так, 0-ні): " << rivno1 << endl;
+	if (d[0].year < d[1].year) {
+		cout << "Дата 1 відбулася швидше за дату 2" << endl;
+		d[0].Print();
+		d[1].Print();
+	}
+	if (d[1].year == d[2].year) {
+		cout << "Дата 1 така сама як дата 2" << endl;
+		d[1].Print();
+		d[2].Print();
+	}
+	if (d[0].year != d[2].year) {
+		cout << "Дата 1 відрізняється від дати 3" << endl;
+		d[0].Print();
+		d[2].Print();
+	}
 
 	return 0;
 }
