@@ -125,16 +125,12 @@ public:
 
 	//перевантаження ==
 	bool operator == (const Calendar& data) {
-		return this->day == data.day;
-		return this->month == data.month;
-		return this->year == data.year;
+		return (this->day, this->month, this->year) == (data.day, data.month, data.year);
 	}
 
 	//перевантаження !=
 	bool operator != (const Calendar& data) {
-		return this->day != data.day;
-		return this->month != data.month;
-		return this->year != data.year;
+		return (this->day, this->month, this->year) != (data.day, data.month, data.year);
 	}
 
 	//перевантаження >
