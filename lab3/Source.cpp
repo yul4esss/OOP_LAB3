@@ -270,19 +270,52 @@ int main() {
 	
 	//порівняння дат
 
+	// <
 	if (d[0].year < d[1].year) {
-		cout << "Дата 1 відбулася швидше за дату 2" << endl;
+		cout << "\nДата 1 відбулася швидше за дату 2" << endl;
+		d[0].Print();
+		d[1].Print();
+	}
+
+	if (d[1].year < d[2].year) {
+		cout << "\nДата 2 відбулася швидше за дату 3" << endl;
+		d[1].Print();
+		d[2].Print();
+	}
+
+	// >
+	if (d[0].year > d[1].year) {
+		cout << "\nДата 1 відбулася пізніше за дату 2" << endl;
+		d[0].Print();
+		d[1].Print();
+	}
+	if (d[1].year > d[2].year) {
+		cout << "\nДата 2 відбулася пізніше за дату 3" << endl;
+		d[1].Print();
+		d[2].Print();
+	}
+
+	// == 
+	if (d[0].year == d[1].year) {
+		cout << "\nДата 1 відбулась в той самий рік як дата 2" << endl;
 		d[0].Print();
 		d[1].Print();
 	}
 	if (d[1].year == d[2].year) {
-		cout << "Дата 1 така сама як дата 2" << endl;
+		cout << "\nДата 2 відбулась в той самий рік як дата 3" << endl;
 		d[1].Print();
 		d[2].Print();
 	}
-	if (d[0].year != d[2].year) {
-		cout << "Дата 1 відрізняється від дати 3" << endl;
+	
+	// !=
+	if (d[0].year != d[1].year) {
+		cout << "\nДата 1 відрізняється від дати 2" << endl;
 		d[0].Print();
+		d[2].Print();
+	}
+	if (d[1].year != d[2].year) {
+		cout << "\nДата 2 відрізняється від дати 3" << endl;
+		d[1].Print();
 		d[2].Print();
 	}
 
